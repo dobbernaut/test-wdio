@@ -1,8 +1,8 @@
-# Test with Mocha and Playwright
+# Test with Mocha and WebdriverIO
 
 This project runs on [node](https://nodejs.org/en/) and [yarn](https://yarnpkg.com/getting-started) for package management.
 
-It uses [Mocha](https://mochajs.org/) for the test framework and [Chai](https://mochajs.org/) to perform test assertions, [playwright](https://playwright.dev/docs/intro) for ui testing and [axios](https://axios-http.com/) as an http client for making http or service requests to test.
+It uses [Mocha](https://mochajs.org/) for the test framework and [Chai](https://mochajs.org/) to perform test assertions, [webdriverio](https://webdriver.io/docs/gettingstarted) for ui testing and [axios](https://axios-http.com/) as an http client for making http or service requests to test.
 
 See [structure](#structure) for a description of the test project structure.
 
