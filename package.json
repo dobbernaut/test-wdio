@@ -1,18 +1,19 @@
 {
-  "name": "test-poc-mocha",
+  "name": "test-wdio-mocha",
   "version": "0.0.1",
-  "description": "mocha test framework poc",
+  "description": "testing with webdriverio and mocha",
   "license": "UNLICENSED",
   "scripts": {
+    "ci": "rm -rf node_modules && yarn install --frozen-lockfile",
     "preinstall": "sh ./scripts/preinstall.sh",
-    "prettier:check": "prettier --check .",
-    "prettier:write": "prettier --write .",
+    "prettier-check": "prettier --check .",
+    "prettier-write": "prettier --write .",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix && yarn lint",
-    "lint:pretty": "yarn lint && yarn prettier:check",
-    "lint:fix:pretty": "yarn lint:fix && yarn prettier:write",
-    "test:ui": "HEADLESS=false wdio run wdio.config.js",
-    "test:ui:headless": "wdio run wdio.config.js"
+    "lint-fix": "eslint . --fix && yarn lint",
+    "lint-pretty": "yarn lint && yarn prettier-check",
+    "lint-fix-pretty": "yarn lint-fix && yarn prettier-write",
+    "test-ui": "HEADLESS=false wdio run wdio.config.js",
+    "test-ui-headless": "wdio run wdio.config.js"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
