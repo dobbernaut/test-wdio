@@ -1,4 +1,4 @@
-import { BasePage } from '@pages/base.page';
+import { BasePage } from '@page/base.page';
 import { StoreCatalogSearchPageElements } from './catalog-search.element';
 
 export class StoreCatalogSearchPage extends BasePage {
