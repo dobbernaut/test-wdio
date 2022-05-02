@@ -36,7 +36,7 @@ Have [nvm](https://github.com/nvm-sh/nvm) installed to make it easier to manage 
 
 ```bash
 nvm use
-yarn install
+yarn ci
 ```
 
 ### Adding node packages
@@ -57,16 +57,10 @@ To [add](https://classic.yarnpkg.com/en/docs/cli/add), use `yarn add -D { packag
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 
 # check nvm installed
-command -v nvm
+nvm
 
 # install node
-nvm install node
-
-# or with a specific version
-nvm install node 16.13.0
-
-# it default to the first node installed but to use a different version
-nvm use 16.13.0
+nvm install 16.13.0
 
 # install yarn globally
 npm install -g yarn
@@ -93,17 +87,14 @@ Download the setup.zip file from the [latest release](https://github.com/coreybu
 # check nvm installed
 nvm
 
-# install a version of node
+# install node
 nvm install 16.13.0
 
-# use a version of node
-nvm use 16.13.0
-
-# check if yarn is installed
-yarn -v
-
-# if yarn not installed, install it globally
+# install yarn globally
 npm install -g yarn
+
+# check yarn working properly
+yarn --version
 ```
 
 ## Setup
@@ -119,7 +110,7 @@ yarn ci
 To run all tests:
 
 ```bash
-yarn test:ui
+yarn test-ui
 ```
 
 ### UI tests - Headless mode
@@ -127,12 +118,12 @@ yarn test:ui
 By default, UI tests are running on browsers in headless mode. To have the browser visible while running the tests, use the `headless` suffixed yard scripts. ie
 
 ```bash
-yarn test:ui:headless
+yarn test-ui-headless
 ```
 
 ### Run specific tests by file or directory
 
-You can run a specific test by passing a `spec` option with a test file or folder to the test:ui script. eg:
+You can run a specific test by passing a `spec` option with a test file or folder to the test-ui script. eg:
 
 If you have a test structure like:
 
@@ -146,11 +137,11 @@ If you have a test structure like:
 ```
 
 ```bash
-# running test:ui script passing a directory
+# running test-ui script passing a directory
 yarn test-ui --spec test/scenario1/*.test.js
 # will run file-1a and file-1b tests
 
-# running test:ui script passing a file
+# running test-ui script passing a file
 yarn test-ui --spec test/scenario2/file-2a.test.js
 # will run file-2a test
 ```
@@ -253,7 +244,7 @@ Before then, the IDE will highlight issues and errors based on rules that were s
 - **index.js** - Use index to export all files from a directory so there's not much clutter from the import statements when importing a few classes or methods from files spread inside the directory eg:
 
 ```
-|-- service
+|-- services
 |   |-- blog-post
 |       |-- blog-post.js
 |       |-- blog-post-helper.js
