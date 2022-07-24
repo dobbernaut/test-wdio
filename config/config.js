@@ -6,3 +6,12 @@ export const Config = {
   headless: process.env.HEADLESS ? process.env.HEADLESS === 'true' : true,
   viewport: process.env.VIEWPORT ? process.env.VIEWPORT.replace('x', ',') : '1440,900',
 };
+
+export const BrowserOptions = [
+  '--disable-gpu',
+  '--disable-logging',
+  '--no-sandbox',
+  '--disable-dev-shm-usage',
+  `--window-size=${Config.viewport}`,
+  `--user-agent=${Config.userAgent}`,
+];
