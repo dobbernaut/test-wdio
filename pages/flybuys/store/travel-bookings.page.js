@@ -1,4 +1,4 @@
-import { BasePage } from '@page/base.page';
+import { BasePage } from '@page/flybuys/base.page';
 import { StoreTravelBookingsPageElements } from './travel-bookings.element';
 
 export class StoreTravelBookingsPage extends BasePage {
