@@ -1,6 +1,6 @@
 import { StatusCode } from '@constant/http-response-codes';
-import { HomePage } from '@page/home.page';
-import { StorePage } from '@page/store/store.page';
+import { HomePage } from '@page/flybuys/home.page';
+import { StorePage } from '@page/flybuys/store/store.page';
 import { BlogPosts } from '@service/sample-api';
 import { expect } from 'chai';
 
